@@ -1,0 +1,111 @@
+body{
+    background-color: lightblue;
+    display: grid;
+    grid-template: 'nav nav nav nav'
+                    'header section segunda div'
+    
+                    'footer footer footer footer';
+    grid-template-areas: 60vh 60vh 60vh 60vh;
+    grid-template-columns: 24vw 24vw 24vw 24vw;
+
+}
+
+@media {max-width:600px}
+
+header{
+    height:200px;
+    background-color: lightsalmon;
+}
+
+section{
+    grid-area:section;
+}
+
+.segunda {
+    grid-area:segunda;
+    background-color: lightgreen;
+    
+}
+
+header, section, .segunda, div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke
+}
+
+nav a{
+    color:whitesmoke
+}
+
+footer{
+    grid-area:footer;
+}
+
+@media (max-width: 768px) {
+
+body{
+    grid-template-areas: 'nav nav nav nav'
+                        'header header section section'
+                        '.segunda .segunda div div'
+                        'footer footer footer footer';
+    grid-template-rows: 20vh 70vh 70vh 40vh;
+}
+    nav a {
+        display: none;
+        text-decoration: none;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                            'header header header header'
+                            'section section section section'
+                            'segunda segunda segunda segunda'
+                            'div div div div'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 40vh 60vh 70vh;
+    }
+        nav a {
+            display: none;
+
+        }
+    }
+
+
+footer{
+    background-image: url(img/bunny.jpg);
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+footer img{
+
+    border-radius:20px;
+    width: 60px;
+    height: 10px;
+}
+
+footer a{
+    font-size:20pt;
+    color: black;
+    padding:10px;
+    text-decoration: none;
+}
+
+@media (max-width:725px) {
+    footer{
+        grid-template-areas: 'nav nav nav nav'
+        'header header header header'
+        'section section section section'
+        'segunda segunda segunda segunda'
+        'div div div div'
+        'footer footer footer footer';
+        background-color: black
+    }
+}
